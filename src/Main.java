@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // First level: 1.
-        // First level: 1.
-        // First level: 1.
+
         /*Scanner console = new Scanner(System.in);
 
         System.out.println("Введите количество метров: ");
