@@ -1,0 +1,51 @@
+public class task090922 {
+
+
+  public static void main(String[] args) {
+
+   //1
+    System.out.println(sumDoubl(3, 5));//8
+    System.out.println(sumDoubl(4, 4));//16
+
+    //2
+    Positiv(-3);
+
+  }
+
+  //     C помощью оператора if написать метод возвращающий сумму двух
+  //     целых чисел. А в случае если эти числа равны, возвращающий
+  //     двойную сумму.
+  //   3+5 -> 8
+  //   5+5 -> 20
+
+  public static int sumDoubl(int a, int b) {
+    int sum = a + b;
+    if (a == b) {
+      sum = sum * 2;
+
+    } else {
+      sum = a + b;
+
+    }
+    return sum;
+  }
+
+
+  // Second level: C помощью оператора if написать метод,
+  // принимающий целое число n и выводящий на экран надпись
+  // является ли оно положительным , отрицательным или нулем.
+
+
+  public static void Positiv(int x) {
+    if (x > 0) {
+      System.out.println("Number ist positive");
+    } else if (x < 0) {
+      System.out.println("Number ist negative");
+    }
+    // if (x == 0)
+   else {
+      System.out.println("Number ist zero");
+    }
+
+  }
+}
