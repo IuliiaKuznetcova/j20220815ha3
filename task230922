@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class hw230922 {
+
+  public static void main(String[] args) {
+
+//First level: Напишите метод, который принимает три числа и определяет в каком порядке они введены:
+//печатает increasing  если числа возрастают (1,2.3),  decreasing если числа введены в убывающем порядке (3,2,1)
+//и "neither increasing nor decreasing order" во всех остальных случаях.
+    System.out.println("_______________________ 1__________________________");
+
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter num1, num2, num3: ");
+    int num1 = scan.nextInt();
+    int num2 = scan.nextInt();
+    int num3 = scan.nextInt();
+    numbersByRank(num1, num2, num3);
+
+//Second level: Вася рано встает на работу и поэтому рано ложится спать. Сосед Васи любит слушать громкую музыку.
+// У Васи проблемы если сосед слушает музыку и еще нет семи утра или уже позже 20 часов. Напишите метод, возвращающий
+// true если у Васи проблемы.
+//boolean vasiaInTrouble (boolean singing, int hour)
+//где hour - время в часах в диапазоне от 0 до 23
+//например:
+//vasiaInTrouble (true, 6) -> true
+//vasiaInTrouble (true, 8) -> false
+//vasiaInTrouble (false, 6) -> false
+
+    //singen && (<7 || >20)
+    System.out.println("_______________________ 2__________________________");
+
+
+    System.out.println(SongAgainstVasya(true, 5));
+    System.out.println(SongAgainstVasya(true, 22));
+    System.out.println(SongAgainstVasya(true, 10));
+    System.out.println(SongAgainstVasya(false, 6));
+    System.out.println(SongAgainstVasya(false, 4));
+    System.out.println(SongAgainstVasya(false, 23));
+  }
+
+
+
+  public static void numbersByRank(int num1, int num2, int num3) {
+    if (num1 < num2 && num2 < num3) {
+      System.out.println("increasing: " + num1 + " " + num2 + " " + num3);
+    } else if (num1 > num2 && num2 > num3) {
+      System.out.println("decreasing: " + num1 + " " + num2 + " " + num3);
+    } else {
+      System.out.println("neither increasing nor decreasing order: " + num1 + " " + num2 + " " + num3);
+    }
+  }
+
+
+
+
+  public static boolean SongAgainstVasya(boolean singing, int hour) {
+    return (singing && (hour < 7 || hour > 20));
+  }
+}
