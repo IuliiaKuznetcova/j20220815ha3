@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         // First level: 1.
 
-        /*Scanner console = new Scanner(System.in);
+        Scanner console = new Scanner(System.in);
 
         System.out.println("¬ведите количество метров: ");
         double meter = console.nextDouble();
@@ -18,7 +18,7 @@ public class Main {
 
         double resultInch = meter * inch;
 
-        System.out.println(meter + " метров " + "равно " + resultInch + " дюймов. ");*/
+        System.out.println(meter + " метров " + "равно " + resultInch + " дюймов. ");
 
         // First level: 2.
 
