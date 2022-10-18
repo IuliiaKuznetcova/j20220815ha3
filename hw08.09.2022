@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Enter num1= ");
+    int num1 = scan.nextInt();
+    System.out.print("Enter num2= ");
+    int num2 = scan.nextInt();
+    System.out.print("Enter num3    = ");
+    int num3 = scan.nextInt();
+
+//    First level:
+// Логический оператор И (&&), придумать пример с ленивого исполнен я условия для оператора И 
+// (то есть когда выполняется только первое условие)
+
+    if (num1 > num2 && num1 > num3) {
+      System.out.println("Num1-Max");
+    } else {
+      System.out.println("Num1-not Max");
+    }
+
+//    2)Логический оператор "ИЛИ" (||)
+// Логический оператор НЕ (!)
+// Для самостоятельной практики напишите несколько блоков «if» с этими логическими операторами.
+
+    if (num1 > num2 || num1 > num3) {
+      if (num1 != num2 || num1 != num3) {
+        System.out.println("Num1-not Min");
+      }
+    }
+    else {
+      System.out.println("Num-Min");
+    }
+
+    if (num2 > num1 || num2 > num3) {
+      if (num2 != num1 || num2 != num3) {
+        System.out.println("Num2-not Min");
+      }
+    } else {
+      System.out.println("Num2-Min");
+    }
+
+    if (num3 > num1 || num3 > num2) {
+      if (num3 != num1 || num3 != num2) {
+        System.out.println("Num3-not Min");
+      }
+    } else {
+      System.out.println("Num3-Min");
+    }
+
+//    Second level:
+//    Напишите метод который принимает на вход число в диапазоне от 1 до 100
+//    и возвращает true  если это четное число, и false если оно не четное.
+   
+    Scanner scan1 = new Scanner(System.in);
+    System.out.print("Enter Number 1 ... 100: ");
+    int numb = scan1.nextInt();
+
+    if (numb % 2 == 0) {
+      System.out.println("True - chetnoe");
+    } else {
+      System.out.println("False - nechetnoe");
+    }
+
+  }

@@ -1,0 +1,55 @@
+public class hw270922 {
+  public static void main(String[] args) {
+    System.out.println("Task1");
+    //    1
+//        Необходимо написать метод, который печатает все целые нечетные числа
+//        в диапазоне  между num1 и num2.
+//        Учтите, num1 может быть как меньше, так больше или равно  num2.
+    oddNumberPrinting(2, -5);
+    oddNumberPrinting(-5, 21);
+    oddNumberPrinting(3, 15);
+
+    System.out.println("_______________");
+    System.out.println("Task2");
+
+    //     Variant 2
+//        Необходимо написать метод, которая печатает все целые числа в диапазоне
+//        между num1 и num2. Для каждого числа, которое делится на 2
+//        выводить надпись «делиться на 2».
+//        Для каждого числа, которое делится на 3 выводить надпись «делится на 3»
+    printEven(4, 23);
+
+  }
+
+  public static void oddNumberPrinting (int num1, int num2) {
+
+    if ((num1 >= num2) || (num1 < 0)) {
+      System.out.println("No data to print");
+    } else {
+      for (int i = num1 ; i < num2; i++) {
+        if (i % 2 != 0) {
+          System.out.println(i);
+        }
+      }
+    }
+
+
+  }
+
+  //     Variant 2
+  public static void printEven(int num1, int num2) {
+    if ((num1 >= num2) || (num1 < 0)) {
+      System.out.println("Out of range");
+    } else {
+      for (int i = num1 ; i < num2; i++) {
+        if (i % 2 == 0) {
+          System.out.println(i+" divisible by 2");
+        }
+        if (i % 3 == 0) {
+          System.out.println(i+" divisible by 3");
+        }
+      }
+    }
+  }
+}
+
