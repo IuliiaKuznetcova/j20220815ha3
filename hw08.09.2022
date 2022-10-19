@@ -11,7 +11,7 @@ public class Main {
     int num2 = scan.nextInt();
     System.out.print("Enter num3    = ");
     int num3 = scan.nextInt();
-
+File | Make File Writable
 //    First level:
 // Логический оператор И (&&), придумать пример с ленивого исполнен я условия для оператора И 
 // (то есть когда выполняется только первое условие)
