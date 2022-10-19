@@ -1,15 +1,16 @@
 public class Employee{
 
-  String firstName;
-  String lastName;
+ /* String firstName;
+  String lastName;*/
   int salary;
   int hoursOfWork;
 
 
 
-  public Employee(String firstName, String lastName, int salary, int hoursOfWork){
-    this.firstName = firstName;
-    this.lastName = lastName;
+  //public Employee(String firstName, String lastName, int salary, int hoursOfWork)
+  public Employee (int salary, int hoursOfWork){
+    /*this.firstName = firstName;
+    this.lastName = lastName;*/
     this.salary = salary;
     this.hoursOfWork = hoursOfWork;
 
@@ -28,5 +29,10 @@ public class Employee{
     }
   }
 
+  @Override
+  public String toString() {
+    return String.format("Employee(salary=%d, hours=%d)", salary, hoursOfWork);
+  }
 
 }
+
