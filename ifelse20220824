@@ -1,0 +1,67 @@
+package ifelse20220824;
+
+
+/*Представьте, Вы пишите программу  для расчета штрафов за превышение скорости.
+В качестве исходных данных у вас: ограничение скорости на данном участке дороги, скорость,
+с которой двигался автомобиль и признак того, что нарушение было совершено на автобане.
+Естественно, все три значения заданы переменными. Таблица штрафов такая:
+- превышение менее 10% от скоростного ограничения – не штрафуется
+- 10% - менее 20%   от скоростного ограничения – 50 евро
+- 20% - менее 30%   от скоростного ограничения – 150 евро не на автобане, и 200 на автобане
+- от 30% и выше  - 500евро плюс, если нарушение на автобане, лишение прав на 3 месяца.
+Реализуйте программу, которая рассчитывает штраф и выводит соответствующее сообщение на экран.*/
+
+
+import java.util.Scanner;
+
+public class HomeWork20220824_2 {
+
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Укажите ограничение скорости");
+        double speedLimit = scanner.nextDouble();
+
+        System.out.println("Укажите скорость автомобиля");
+        double speedCar = scanner.nextDouble();
+
+        /*System.out.println("Машина двигалась по автобану?");
+        boolean autoban = scanner.hasNextBoolean();*/
+
+
+        double overSpeed10 = speedLimit * 1.1;
+        double overSpeed20 = speedLimit * 1.2;
+        double overSpeed30 = speedLimit * 1.3;
+
+        // превышение 10% - 0.1, 20% - 0.2, 30% - 0.3
+        boolean autobahn = true;
+
+        if (speedCar < overSpeed10) {
+            System.out.println("Штраф не предусмотрен");
+        }
+
+        if (speedCar >= overSpeed10 && speedCar < overSpeed20) {
+            System.out.println("Штраф 50 евро");
+        }
+
+           else if
+        (speedCar >= overSpeed20 && speedCar < overSpeed30) {
+            if (autobahn) {
+                System.out.println("Штраф 200 евро");
+            } else {
+                System.out.println("Штраф 150 евро");
+            }
+        }
+           else if (speedCar >= overSpeed30) {
+
+                if (autobahn)
+                    System.out.println("Штраф 500 евро и лишение прав");
+                else {
+                    System.out.println("Штраф 500 евро");
+                }
+
+
+            }
+        }
+    }
