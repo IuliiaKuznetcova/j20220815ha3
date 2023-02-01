@@ -1,0 +1,70 @@
+package HW;
+
+/*сделать массив длиной 22
+
+обойти массив циклом и….
+посчитать сумму элементов с начала и до конца
+посчитать сумму элементов с конца в начало
+посчитать сумму элементов сначала с четными а потом с нечетными индексами
+пройтись циклом так что бы суммировались первый и послежний, потом второй и предпослежний итд
+
+т.е если дан массив [1 2 3 4 5 6 7 8 9] то цикл должен считать
+                    (1+9)  +  (2 + 8) + (3 + 7) итд*/
+
+public class Array_30_01_23 {
+
+
+    public static void main(String[] args) {
+        int[] array = {1, 4, -7, 2, 6, -5, 7, -3, 9, 5, 5, 8, 1, 1, -2, 9, 3, 6, 4, 2, 5, -8};
+
+
+       System.out.println("Длина массива равна " + array.length);
+       System.out.println("Сумма элементов массива с начала до конца = " +summArrayFromLeftToRight(array));
+      System.out.println("Сумма элементов массива с конца до начала = " + summArrayFromRightToLeft(array));
+        System.out.println("Сумма четных элементов = " + summOfEvenElements(array));
+        System.out.println("Сумма нечетных элементов = " + summOfOdElements(array));
+        System.out.println("_________________");
+        System.out.println("Последний пункт задания я сделать не смогла");
+        ;
+    }
+
+
+    public static int summArrayFromLeftToRight(int[] arr) {
+        int summFromLeftToRight = 0;
+        for (int i = 0; i < arr.length; i++) {
+            summFromLeftToRight += arr[i];
+        }
+            return summFromLeftToRight;
+    }
+
+    public static int summArrayFromRightToLeft(int[] arr) {
+        int summFromRightToLeft = 0;
+        for (int i = arr.length-1; i>=0; i--) {
+            summFromRightToLeft += arr[i];
+        }
+       return summFromRightToLeft;
+    }
+
+    public static int summOfEvenElements(int[] arr) {
+        int summEvenElements = 0;
+        for (int i = arr.length-1; i>=0; i--) {
+            if (i % 2 == 0)
+            summEvenElements += arr[i];
+        }
+        return summEvenElements;
+    }
+
+    public static int summOfOdElements(int[] arr) {
+        int summOfOdElements = 0;
+        for (int i = arr.length-1; i>=0; i--) {
+            if (i % 2 != 0)
+                summOfOdElements += arr[i];
+        }
+        return summOfOdElements;
+    }
+
+}
+
+
+
+
